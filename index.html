@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saylani Project 3</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: calibri;
+        }
+    
+        .topline {
+            width: 100%;
+            height: 47px;
+            background-color: rgb(49, 109, 195);
+        }
+    
+        .social-apps ul {
+            display: inline-flex;
+            list-style: none;
+            position: absolute;
+            margin: 0px 0px 0px 85px;
+        }
+    
+        .social-apps ul li {
+            padding: 15px 0px 0px 0px;
+            margin: 0px 0px 0px 30px;
+            font-size: 14px;
+        }
+    
+        .social-apps ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+    
+        .para {
+            margin: 0px 0px 0px 436px;
+            padding: 13px 0px 0px 0px;
+            color: #fff;
+        }
+    
+        .donation-button {
+            margin: -22px 125px 0px 0px;
+        }
+    
+        .donation-button ul li {
+            float: right;
+            list-style: none;
+            margin: 0px 7px 0px 0px;
+            padding: 0px 0px 0px 0px;
+        }
+    
+        .donation-button ul li button {
+            border: 1px solid #427900;
+            background-color: rgb(245, 245, 245);
+            color: #427900;
+            padding: 7px 7px;
+            text-align: center;
+            font-size: 11px;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+        }
+    
+        .menu-bar {
+            width: 100%;
+            height: 70px;
+            background-color: #f7f8fa;
+        }
+    
+        .menu-bar nav {
+            position: absolute;
+            margin: 0px 0px 0px 565px;
+        }
+    
+        .menu-bar nav ul {
+            display: inline-flex;
+            list-style: none;
+        }
+    
+        .menu-bar nav ul li {
+            margin: 25px 0px 0px 20px;
+            padding: 0px 0px 0px 14px;
+        }
+    
+        .menu-bar nav ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+    
+        .menu-bar nav ul li a:hover {
+            color: #316dc3;
+            transition: 0.5s;
+            font-weight: 900;
+        }
+    
+        img {
+            float: left;
+            margin: 10px 0px 0px 110px;
+        }
+    
+        .sub-menu-1 {
+            display: none;
+        }
+    
+        .menu-bar nav ul li:hover .sub-menu-1 {
+            display: block;
+            position: absolute;
+            background: #fff;
+            margin: 0px 0px 0px -22px;
+        }
+    
+        .menu-bar nav ul li:hover .sub-menu-1 ul {
+            display: block;
+            margin: 10px;
+        }
+    
+        .menu-bar nav ul li:hover .sub-menu-1 ul li {
+            margin: 15px 0px 0px 0px;
+            font-size: 13px;
+        }
+    
+        .menu-bar nav ul li:hover .sub-menu-1 ul li a {
+            color: #000;
+        }
+    
+        .sub-menu-2 {
+            display: none;
+        }
+    
+        .menu-bar nav ul li:hover .sub-menu-1 ul li:hover .sub-menu-2 {
+            display: block;
+            position: absolute;
+            background: #888;
+            margin: -30px 0px 0px 30px;
+        }
+    
+        .sub-menu-3 {
+            display: none;
+        }
+    
+        .menu-bar nav ul li:hover .sub-menu-1 ul li:hover .sub-menu-2 ul li:hover .sub-menu-3 {
+            display: block;
+            position: absolute;
+            background: #f45324;
+            margin: -30px 0px 0px 95px;
+        }
+    
+        .temp {
+            margin: -10px 0px 0px -110px;
+        }
+    
+        .trigger p {
+            border: 2px solid #316dc3;
+            background-color: #316dc3;
+            color: #fff;
+            margin: 521px 120px 0px 0px;
+            padding: 3px;
+            cursor: auto;
+            width: 100%;
+        }
+    
+        .intro {
+            background-color: #f7f8fa;
+        }
+    
+        .intro .picture img {
+            margin: 0px 0px 0px 660px;
+        }
+    
+        .stats {
+            background-color: #f7f8fa;
+        }
+    
+        .stats ul {
+            background-color: #2655e8;
+            width: 100%;
+            height: 311px;
+        }
+    
+        /*.svg-inline--fa{width: 41px; height: 40px;margin-left: 110px;}*/
+        .stats ul {
+            display: inline-flex;
+            list-style: none;
+            position: absolute;
+            margin: 0px 0px 0px 0px;
+        }
+    
+        .stats ul li {
+            margin: auto;
+            color: white;
+        }
+    
+        #Capa_1 {
+            fill: #fff;
+            width: 41px;
+            height: 40px;
+            margin-left: 80px;
+        }
+    
+        .nails .picture img {
+            margin: 5px 0px 0px 660px;
+        }
+    
+        .offer-1 {
+            border: 1px solid #fff;
+            width: 361px;
+            height: 187px;
+            background-color: #fff;
+            box-shadow: 10px 10px 5px #aaaaaa;
+            margin-left: 104px;
+            margin-top: 31px;
+        }
+    
+        .offer-1 p {
+            color: #316dc3;
+            margin: 12px 0px 0px 80px;
+            font-family: times new roman;
+            font-size: 20px;
+            font-weight: 900;
+        }
+    
+        #Capa_2 {
+            fill: #03486d;
+            width: 41px;
+            height: 40px;
+            margin-left: 145px;
+            margin-top: 70px;
+        }
+    
+        .offer-2 {
+            border: 1px solid #fff;
+            width: 361px;
+            height: 187px;
+            background-color: #fff;
+            box-shadow: 10px 10px 5px #aaaaaa;
+            margin-left: 492px;
+            margin-top: -187px;
+        }
+    
+        .offer-2 p {
+            color: #316dc3;
+            margin: 12px 0px 0px 120px;
+            font-family: times new roman;
+            font-size: 20px;
+            font-weight: 900;
+        }
+    
+        .offer-3 {
+            border: 1px solid #fff;
+            width: 361px;
+            height: 187px;
+            background-color: #fff;
+            box-shadow: 10px 10px 5px #aaaaaa;
+            margin-left: 880px;
+            margin-top: -187px;
+        }
+    
+        .offer-3 p {
+            color: #316dc3;
+            margin: 12px 0px 0px 120px;
+            font-family: times new roman;
+            font-size: 20px;
+            font-weight: 900;
+        }
+    
+        .offer-4 {
+            border: 1px solid #fff;
+            width: 361px;
+            height: 187px;
+            background-color: #fff;
+            box-shadow: 10px 10px 5px #aaaaaa;
+            margin-left: 104px;
+            margin-top: 31px;
+        }
+    
+        .offer-4 p {
+            color: #316dc3;
+            margin: 12px 0px 0px 100px;
+            font-family: times new roman;
+            font-size: 20px;
+            font-weight: 900;
+        }
+    
+        .offer-5 {
+            border: 1px solid #fff;
+            width: 361px;
+            height: 187px;
+            background-color: #fff;
+            box-shadow: 10px 10px 5px #aaaaaa;
+            margin-left: 492px;
+            margin-top: -187px;
+        }
+    
+        .offer-5 p {
+            color: #316dc3;
+            margin: 12px 0px 0px 120px;
+            font-family: times new roman;
+            font-size: 20px;
+            font-weight: 900;
+        }
+    
+        .offer-6 {
+            border: 1px solid #fff;
+            width: 361px;
+            height: 187px;
+            background-color: #fff;
+            box-shadow: 10px 10px 5px #aaaaaa;
+            margin-left: 880px;
+            margin-top: -187px;
+        }
+    
+        .offer-6 p {
+            color: #316dc3;
+            margin: 12px 0px 0px 110px;
+            font-family: times new roman;
+            font-size: 20px;
+            font-weight: 900;
+        }
+    
+        #Layer_1 {
+            margin: 24.6px 0px 0px 19px
+        }
+    
+        #laptop_1 {
+            margin: 24.6px 0px 0px 19px;
+        }
+    
+        #Capa_3 {
+            margin: 24.6px 0px 0px 19px;
+        }
+    
+        #Capa_4 {
+            width: 30px;
+            width: 30px;
+            margin: 24.6px 0px 0px 19px;
+            fill: #144f07;
+        }
+    
+        .picture img {
+            margin: 5px 0px 0px 660px;
+        }
+    
+        footer ul {
+            display: block;
+            list-style: none;
+            position: absolute;
+            margin: 98px 0px 0px 104px;
+            color: #b0b0b0;
+        }
+    
+        footer ul li {
+            margin-top: 5px;
+        }
+    
+        .bottom-links {
+            margin-left: 872px;
+            display: inline-flex;
+            position: absolute;
+            list-style: none;
+        }
+    
+        .bottom-links li {
+            background-color: #316dc3;
+            margin-top: -85px;
+            margin-left: 9px;
+            text-align: center;
+            border: 1px solid #316dc3;
+            border-radius: 1000%;
+            width: 30px;
+            height: 30px;
+        }
+    
+        .bottom-links li a i {
+            color: #fff;
+            text-align: center;
+            margin-top: 5px;
+        }
+    
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            font-size: 24px;
+            border: 1px solid #e5e5e5;
+            outline: none;
+            background-color: #e5e5e5;
+            width: 50px;
+            height: 48px;
+            color: white;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 0px;
+        }
+    
+        #myBtn:hover {
+            background-color: #666666;
+        }
+    </style>
+</head>
+<body>
+    <div class="home">
+		<div class="topline">
+			<div class="social-apps">
+				<ul>
+					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+					<li class="w-app"><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+				</ul>
+			</div>
+			<div class="para">
+				<p>Millions of people's life has changed, millions more awaiting your donation</p>
+			</div>
+			<div class="donation-button">
+				<ul>
+					<li><button>SMIT Results</button></li>
+					<li><button>Donate Now</button></li>
+					<li><button>UK Donor</button></li>
+				</ul>
+			</div>
+		</div>
+		<div class="second-line">
+			<div><img width="190px" src="Saylani-logo.png" alt="Saylani-logo">
+			</div>
+			<div class="menu-bar">
+				<nav>
+					<ul>
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">About <i class="fa fa-caret-down"></i></a>
+							<div class="sub-menu-1">
+								<ul>
+									<li><a href="#">Introduction</a></li>
+									<li><a href="#">Chairman Message</a></li>
+									<li><a href="#">Saylani Annual Report</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="#">Saylani Services <i class="fa fa-caret-down"></i></a>
+							<div class="sub-menu-1">
+								<ul>
+									<li><a href="#">Education</a>
+										<div class="sub-menu-2">
+											<ul>
+												<li><a href="#">Saylani Mass Training</a>
+													<div class="sub-menu-3">
+														<ul>
+															<li><a href="#">SMIT Programs</a></li>
+															<li><a href="#">Faculty</a></li>
+															<li><a href="#">Result</a></li>
+															<li><a href="#">Entry Test Schedule</a></li>
+														</ul>
+													</div>
+												</li>
+												<li><a href="#">Saylani Incubator</a></li>
+												<li><a href="#">Green House</a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="#">Medical</a>
+										<div class="sub-menu-2">
+											<ul>
+												<li><a href="#">Saylani Blood Bank and Thalassemia Center</a></li>
+												<li><a href="#">Saylani Clinic / Hospital</a></li>
+												<li><a href="#">Medical Internship Form</a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="#">Welfare</a>
+										<div class="sub-menu-2">
+											<ul>
+												<li><a href="#">Family Adoption</a></li>
+												<li><a href="#">Wedding Help</a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="#">Hajj Application Form</a></li>
+									<li><a href="#">Saylani Dastarkhuwan</a></li>
+									<li><a href="#">Saylani RO Plant</a></li>
+									<li><a href="#">Online Sadqah</a></li>
+									<li><a href="#">Online Taweezat/Istekhara</a></li>
+									<li><a href="#">Saylani Job Bank</a></li>
+									<li><a href="#">Online Quran Academy</a>
+										<div class="sub-menu-2">
+											<ul>
+												<li><a href="#">Online Quran Admission</a></li>
+												<li><a href="#">Quran App (Tafteesh) </a></li>
+												<li><a href="#">Online Quran Registration</a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="#">Books</a></li>
+									<li><a href="#">Saylani Online Masjid</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="#">Future Projects <i class="fa fa-caret-down"></i></a>
+							<div class="sub-menu-1">
+								<ul>
+									<li><a href="#">Saylani University</a></li>
+									<li><a href="#">Saylani City</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="#">Media</a></li>
+						<li><a href="#">News</a></li>
+						<li><a href="#">Donation <i class="fa fa-caret-down"></i></a>
+							<div class="sub-menu-1">
+								<ul>
+									<li><a href="#">Bank Details</a></li>
+									<li><a href="#">Sadqa</a></li>
+									<li><a href="#">Aqiqa</a></li>
+									<li><a href="#">Other Donation</a></li>
+									<li><a href="#">Corona Effecties</a></li>
+									<li><a href="#">Ramzan-2020</a>
+										<div class="sub-menu-2">
+											<ul>
+												<li><a href="#">For Saudi Donor</a></li>
+												<li><a href="#">For Europe Donor</a></li>
+												<li><a href="#">For UK Donor</a></li>
+												<li><a href="#">For USA Donor</a></li>
+												<li><a href="#">For UAE Donor</a></li>
+												<li><a href="#">For PAK Donor</a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="#">Contact Us</a></li>
+	
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="temp">
+			<img src="temnew.jpg" width="100%" height="489px">
+		</div>
+		<div class="trigger">
+			<center>
+				<p>( <a href="#" style="color: #00ff00; text-decoration: none;cursor: auto;">News-1 Dated:15-06-2019)</a>
+					PIAICNext Phase Admission in Islamabad And Faisalabad" .<a href="#"
+						style="color: blue; text-decoration: none;cursor: pointer;">More Details</a> <a href="#"
+						style="color: #00ff00;text-decoration: none;cursor: auto;">(News-2 Dated:15-05-2019)</a> Saylani
+					Welfare Announced "Donation Application"</p>
+			</center>
+		</div><br>
+		<div class="intro"><br><br><br>
+			<div class="heading">
+				<center>
+					<h1><span style="color: blue;font-family: times new roman; font-size: 40px;">INTRO</span><span
+							style="color: green;font-family: times new roman;font-size: 40px;">DUCTION</span></h1>
+				</center>
+			</div>
+			<center><div class="picture">
+				<img src="intro.jpg" width="40px" height="42px">
+			</div></center><br><br><br>
+			<div class="wording"
+				style="margin: 0px 218px 0px 200px;text-align: justify;color: #676767;font-size: 16.5px;line-height: 1.6em;">
+				Established in May 1999 by famous spiritual and religious scholar Maulana Bashir Ahmed Farooqui, Saylani
+				Welfare International Trust was built on the fundamentals of breaking the cycle of poverty, alleviating the
+				financial troubles of the poor, giving people a chance to live a dignified life and spreading happiness.
+				<br><br>
+	
+				We are an organization that believes in lighting up the lives of underprivileged people across the world. We
+				endeavor to provide the best quality services in areas including food, education, medical and social welfare
+				free of cost to people living in the dark. With over 60 different sectors, we feed thousands of hungry
+				people each day, hundreds more are given the hope of life through medical health care, many are educated to
+				become leaders of tomorrow and several are given the opportunity to stand on their feet financially.
+				<br><br>
+	
+				Today, we are proud to say that our physical presence extends throughout Pakistan with a vast network of 125
+				branches operating in major cities including Karachi, Lahore, Islamabad, Rawalpindi, Hyderabad and
+				Faisalabad. Apart from Pakistan, we have overseas offices in the UK, USA and UAE as well. Our worldwide
+				branches are operating under the guidance of a team of over 2,000 working professionals who help almost
+				125,000 people on a daily basis. <br><br>
+	
+				We strongly believe that a little help goes a long way and our work would not be possible without the
+				generous support of our valuable donors. Our local and international donors have graciously lent us a hand
+				by supporting our causes and enabling us to serve the needs of people in need.
+				<br><br><br><br>
+			</div>
+		</div>
+		<div class="stats">
+			<ul>
+				<li><svg id="Capa_1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="utensils" role="img"
+						xmlns="http://www.w3.org/2000/svg" viewBox="0 0 416 512">
+						<path fill="#fff"
+							d="M207.9 15.2c.8 4.7 16.1 94.5 16.1 128.8 0 52.3-27.8 89.6-68.9 104.6L168 486.7c.7 13.7-10.2 25.3-24 25.3H80c-13.7 0-24.7-11.5-24-25.3l12.9-238.1C27.7 233.6 0 196.2 0 144 0 109.6 15.3 19.9 16.1 15.2 19.3-5.1 61.4-5.4 64 16.3v141.2c1.3 3.4 15.1 3.2 16 0 1.4-25.3 7.9-139.2 8-141.8 3.3-20.8 44.7-20.8 47.9 0 .2 2.7 6.6 116.5 8 141.8.9 3.2 14.8 3.4 16 0V16.3c2.6-21.6 44.8-21.4 48-1.1zm119.2 285.7l-15 185.1c-1.2 14 9.9 26 23.9 26h56c13.3 0 24-10.7 24-24V24c0-13.2-10.7-24-24-24-82.5 0-221.4 178.5-64.9 300.9z">
+						</path>
+					</svg>
+					<div style="font-size: 50px; margin-left: 50px;font-family: times new roman;">125,000</div>
+					<div style="font-size: 15px;font-family: georgia;">DAILY DASTRAKHAN <span
+							style="color: #00ff00; font-size: 20px;font-family: georgia;">(MONTHLY)</span></div>
+				</li>
+				<li><svg id="Capa_1" enable-background="new 0 0 512 512" height="20" viewBox="0 0 512 512" width="10"
+						xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="m162.56 351.268 7.52-8.45c-5.494-17.559-5.509-36.89.36-54.74-43.22 23.745-97.937 14.283-130.6-24.35-24.26 19.24-39.84 48.97-39.84 82.27v150c0 8.28 6.72 15 15 15h123.58c-1.67-4.69-2.58-9.74-2.58-15v-75c0-25.72 9.43-50.49 26.56-69.73z" />
+						<circle cx="120" cy="195.998" r="75" />
+						<path
+							d="m472.16 263.728c-32.722 38.703-87.477 48.061-130.6 24.34 5.86 17.886 5.861 37.167.36 54.75l7.52 8.45c17.13 19.24 26.56 44.01 26.56 69.73v75c0 5.26-.91 10.31-2.58 15h123.58c8.28 0 15-6.72 15-15v-150c0-33.3-15.58-63.03-39.84-82.27z" />
+						<circle cx="392" cy="195.998" r="75" />
+						<path
+							d="m256 405.998c-28.84 0-54.55-13.63-71.03-34.79-11.8 13.26-18.97 30.7-18.97 49.79v75c0 8.28 6.72 15 15 15h150c8.28 0 15-6.72 15-15v-75c0-19.09-7.17-36.53-18.97-49.79-16.48 21.16-42.19 34.79-71.03 34.79z" />
+						<circle cx="256" cy="315.998" r="60" />
+						<path
+							d="m213.319 121.992c17.126 15.828 34.103 26.34 34.817 26.78 4.823 2.968 10.904 2.968 15.727 0 .715-.44 17.691-10.952 34.817-26.78 24.764-22.886 37.32-45.135 37.32-66.128 0-47.676-47.41-70.055-80-43.57-32.663-26.544-80-3.98-80 43.57 0 20.993 12.556 43.242 37.319 66.128z" />
+						</svg>
+					<div style="font-size: 50px; margin-left: 50px;font-family: times new roman;">7,500</div>
+					<div style="font-size: 15px;font-family: georgia;">FAMILY ADAPTION <span
+							style="color: #00ff00; font-size: 20px;font-family: georgia;">(MONTHLY)</span></div>
+				</li>
+				<li><svg id="Capa_1" enable-background="new 0 0 512.014 512.014" height="20" viewBox="0 0 512.014 512.014"
+						width="10" xmlns="http://www.w3.org/2000/svg">
+						<g>
+							<path
+								d="m498.862 45.865c-12.395-16.433-31.309-25.857-51.893-25.857h-8.714v-5c0-8.284-6.716-15-15-15s-15 6.716-15 15v40c0 8.284 6.716 15 15 15s15-6.716 15-15v-5h8.714c11.083 0 21.268 5.075 27.942 13.923s8.756 20.035 5.711 30.692l-39.812 139.342c-11.11 38.885-47.114 66.042-87.555 66.042s-76.445-27.158-87.555-66.042l-39.811-139.343c-3.045-10.657-.963-21.844 5.711-30.692 6.674-8.849 16.859-13.923 27.942-13.923h8.713v5c0 8.284 6.716 15 15 15s15-6.716 15-15v-40c0-8.284-6.716-15-15-15s-15 6.716-15 15v5h-8.713c-20.583 0-39.498 9.425-51.893 25.857-12.396 16.433-16.261 37.208-10.606 56.999l39.812 139.342c7.286 25.5 22.328 47.419 43.5 63.39 4.538 3.423 9.271 6.478 14.153 9.2l43.748 103.258v10.826c0 29.295-23.833 53.128-53.128 53.128s-53.128-23.833-53.128-53.128v-102.872c0-47.42-38.58-86-86-86s-86 38.58-86 86v35.509c-34.192 6.968-60 37.271-60 73.491 0 41.355 33.645 75 75 75s75-33.645 75-75c0-36.219-25.808-66.522-60-73.491v-35.509c0-30.878 25.122-56 56-56s56 25.122 56 56v102.872c0 45.837 37.291 83.128 83.128 83.128s83.128-37.291 83.128-83.128v-10.826l43.749-103.258c4.882-2.722 9.615-5.777 14.152-9.2 21.172-15.97 36.214-37.89 43.5-63.39l39.812-139.342c5.655-19.79 1.788-40.566-10.607-56.998zm-378.862 389.142c0 24.813-20.187 45-45 45s-45-20.187-45-45 20.187-45 45-45 45 20.187 45 45zm233.256-58.451-20.452-48.273c6.697 1.135 13.529 1.724 20.453 1.724s13.755-.589 20.452-1.724z" />
+							<circle cx="75" cy="435.007" r="15" />
+						</g>
+					</svg>
+					<div style="font-size: 50px; margin-left: 25px;font-family: times new roman;">43,749</div>
+					<div style="font-size: 15px;font-family: georgia;">MEDICAL <span
+							style="color: #00ff00; font-size: 20px;font-family: georgia;">(MONTHLY)</span></div>
+				</li>
+				<li><svg id="Capa_1" enable-background="new 0 0 512 512" height="20" viewBox="0 0 512 512" width="10"
+						xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="m501.991 128.354-241-85.031c-3.229-1.14-6.752-1.14-9.981 0l-241 85.031c-5.992 2.114-10.002 7.774-10.01 14.128s3.989 12.023 9.976 14.151l241 85.677c1.625.578 3.325.867 5.024.867 1.7 0 3.399-.289 5.024-.867l241-85.677c5.987-2.128 9.983-7.797 9.976-14.151-.008-6.354-4.018-12.014-10.009-14.128z" />
+						<path
+							d="m475.973 328.574v-130.84l-30 10.665v120.175c-9.036 5.201-15.125 14.946-15.125 26.121 0 11.174 6.089 20.92 15.125 26.121v73.716c0 8.284 6.716 15 15 15s15-6.716 15-15v-73.715c9.036-5.2 15.125-14.947 15.125-26.121 0-11.175-6.088-20.921-15.125-26.122z" />
+						<path
+							d="m256 273.177c-5.149 0-10.22-.875-15.073-2.6l-135.483-48.165v66.008c0 16.149 16.847 29.806 50.073 40.59 28.961 9.4 64.647 14.577 100.483 14.577s71.521-5.177 100.483-14.577c33.226-10.784 50.073-24.441 50.073-40.59v-66.008l-135.482 48.165c-4.854 1.725-9.925 2.6-15.074 2.6z" />
+						</svg>
+					<div style="font-size: 50px; margin-left: 30px;font-family: times new roman;">180,000</div>
+					<div style="font-size: 15px;font-family: georgia;">EDUCATION <span
+							style="color: #00ff00; font-size: 20px;font-family: georgia;">(MONTHLY)</span></div>
+				</li>
+			</ul>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		</div>
+		<div class="nails" style="background-color: #f7f8fa;">
+			<div class="what" style="background-color: #f8f7fa;">
+				<center>
+					<h1><span style="color: #316dc3;font-family: times new roman;font-size: 35px;">WHAT WE </span><span
+							style="color: #427900;font-family: times new roman;font-size: 35px;">ARE DOING?</span></h1>
+				</center>
+			</div>
+			<div class="picture" style="background-color: #f7f8fa;">
+				<img src="intro.jpg" width="40px" height="42px">
+			</div><br><br><br><br>
+			<div class="offers">
+				<div class="offer-1">
+					<svg id="Capa_2" height="41px" viewBox="0 -68 512 512" width="40px" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="m502 180.933594h-59.226562c-5.523438 0-10 4.476562-10 10v8.449218h-62.277344c-1.3125 0-2.613282.257813-3.824219.761719l-79.773437 33.015625c-9.230469 3.824219-16.402344 11.019532-20.1875 20.265625-3.789063 9.242188-3.730469 19.398438.164062 28.601563l.269531.636718c2.3125 5.460938 5.71875 10.105469 9.855469 13.777344-12.140625 3.292969-24.871094 3.558594-37.246094.726563l-78.316406-17.933594c-9.582031-2.191406-19.417969-.476563-27.691406 4.832031-8.269532 5.304688-13.929688 13.53125-15.929688 23.152344-3.964844 19.0625 7.714844 37.753906 26.585938 42.550781l93.445312 23.75c7.914063 2.007813 15.9375 3.007813 23.933594 3.007813 11.988281 0 23.917969-2.246094 35.304688-6.714844l118.84375-46.609375h16.84375v5.261719c0 5.523437 4.480468 10 10 10h59.226562c5.523438 0 10-4.476563 10-10v-137.53125c0-5.523438-4.476562-10-10-10zm-87.964844 122.269531c-1.25 0-2.488281.234375-3.648437.6875l-120.605469 47.304687c-15.066406 5.90625-31.320312 6.921876-47.007812 2.9375l-93.445313-23.75c-8.46875-2.152343-13.710937-10.539062-11.933594-19.09375.898438-4.320312 3.4375-8.011718 7.152344-10.390624 2.65625-1.707032 5.675781-2.585938 8.753906-2.585938 1.21875 0 2.449219.136719 3.671875.417969l78.316406 17.929687c18.84375 4.3125 38.339844 2.929688 56.386719-4.007812l22.726563-8.738282c.46875-.160156.933594-.332031 1.398437-.511718 20.089844-7.746094 45.730469-17.605469 51.242188-19.726563l1.074219-.414062c5.152343-1.980469 7.726562-7.769531 5.746093-12.921875-1.980469-5.15625-7.765625-7.726563-12.925781-5.746094 0 0-.410156.160156-1.167969.449219l-52.121093 20.042969c-8.835938 2.863281-18.390626-1.488282-22.085938-10.21875l-.273438-.640626c-1.800781-4.25-1.824218-8.945312-.074218-13.21875 1.75-4.273437 5.0625-7.601562 9.332031-9.367187l77.9375-32.257813h60.289063v83.820313zm77.964844 15.261719h-39.226562v-117.53125h39.226562zm0 0" />
+						<path
+							d="m97.382812 176.753906h-18.152343v-93.4375h2.769531c7.394531 0 14.777344-1.78125 21.351562-5.152344.308594-.160156.613282-.332031.902344-.523437l64.761719-42.253906c8.949219-4.390625 19.824219-3.390625 27.832031 2.59375l4.675782 3.484375c-.285157.402344-.558594.8125-.835938 1.214844-1.234375 1.796874-2.421875 3.628906-3.539062 5.5-6.914063 11.550781-11.355469 24.546874-12.988282 37.800781-6.816406.734375-13.128906 3.742187-18.042968 8.652343-5.691407 5.691407-8.828126 13.269532-8.828126 21.332032 0 16.628906 13.53125 30.160156 30.160157 30.160156h74.03125c4.085937 0 7.933593 1.59375 10.820312 4.472656 2.898438 2.90625 4.496094 6.757813 4.5 10.84375-.003906 6.101563-3.578125 11.601563-9.144531 14.027344-.644531.285156-1.226562.496094-1.773438.648438-.050781.015624-.097656.03125-.148437.046874-1.347656.390626-2.777344.589844-4.253906.589844h-84.117188c-5.519531 0-10 4.476563-10 10 0 5.523438 4.480469 10 10 10h84.117188c2.582031 0 5.128906-.28125 7.605469-.824218 4.199218.539062 8.453124.832031 12.683593.832031 54.246094 0 98.382813-44.132813 98.382813-98.382813 0-54.246094-44.136719-98.378906-98.382813-98.378906-24.996093 0-48.921875 9.519531-67.027343 26.378906l-5.929688-4.425781c-14.207031-10.613281-33.585938-12.242187-49.359375-4.144531-.308594.15625-.605469.332031-.898437.519531l-64.753907 42.25c-3.65625 1.792969-7.726562 2.734375-11.800781 2.734375h-2.773438v-3.617188c0-5.523437-4.476562-10-10-10h-59.226562c-5.523438 0-10 4.476563-10 10v137.53125c0 5.523438 4.476562 10 10 10h59.226562c5.523438 0 10-4.476562 10-10v-.472656h18.15625c5.519532 0 10-4.476562 10-10 0-5.523437-4.480468-10-10-10zm79.90625-60.789062c0-2.71875 1.054688-5.273438 2.972657-7.1875 1-1 2.175781-1.761719 3.457031-2.265625.542969 6.6875 1.761719 13.234375 3.636719 19.609375-5.558594-.050782-10.066407-4.585938-10.066407-10.15625zm182.859376-17.582032c0 39.144532-28.847657 71.683594-66.40625 77.464844 2.007812-4.507812 3.058593-9.46875 3.058593-14.40625 0-6.058594-1.527343-11.882812-4.386719-17.054687 4.339844-.683594 8.347657-2.6875 11.515626-5.855469 3.960937-3.957031 6.140624-9.21875 6.140624-14.816406v-14.789063c0-11.554687-9.402343-20.957031-20.957031-20.957031h-14.671875c-.527344 0-.957031-.429688-.957031-.957031v-13.960938c0-.527343.429687-.953125.957031-.953125h7.332032.003906.003906 7.332031c.527344 0 .957031.425782.957031.953125 0 5.523438 4.476563 10 10 10 5.519532 0 10-4.476562 10-10 0-10.648437-7.996093-19.449219-18.292968-20.765625v-3.464844c0-5.523437-4.476563-10-10-10-5.523438 0-10 4.476563-10 10v3.464844c-10.300782 1.316406-18.292969 10.117188-18.292969 20.765625v13.960938c0 11.554687 9.402344 20.957031 20.957031 20.957031h14.671875c.527344 0 .957031.429688.957031.957031v14.789063c0 .261718-.09375.488281-.28125.675781-.1875.183594-.410156.277344-.675781.277344h-14.671875c-.527344 0-.957031-.429688-.957031-.953125v-1.355469c0-5.523437-4.476563-10-10-10s-10 4.476563-10 10v1.355469c0 .8125.058594 1.613281.148437 2.40625h-45.195312c-3.351562-8.820313-5.046875-18.128906-5.046875-27.738282 0-14.652343 4.167969-29.320312 12.019531-41.707031 2.257813-3.558593 4.773438-6.953125 7.566406-10.113281 14.878907-16.882812 36.292969-26.5625 58.792969-26.5625 43.21875 0 78.378907 35.160156 78.378907 78.382812zm-300.921876 88.847657h-39.226562v-117.535157h39.226562zm0 0" />
+						<path
+							d="m145.390625 181.210938c-2.347656-3.589844-6.949219-5.242188-11.054687-4.066407-3.96875 1.140625-6.863282 4.691407-7.21875 8.800781-.359376 4.152344 2.050781 8.207032 5.839843 9.914063 3.753907 1.695313 8.273438.882813 11.195313-2.027344 3.332031-3.328125 3.847656-8.710937 1.238281-12.621093zm0 0" />
+						</svg>
+					<p>ONLINE SAQDAH</p>
+				</div>
+				<div class="offer-2">
+					<svg id="Capa_2" enable-background="new 0 0 512 512" height="20" viewBox="0 0 512 512" width="10"
+						xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="m162.56 351.268 7.52-8.45c-5.494-17.559-5.509-36.89.36-54.74-43.22 23.745-97.937 14.283-130.6-24.35-24.26 19.24-39.84 48.97-39.84 82.27v150c0 8.28 6.72 15 15 15h123.58c-1.67-4.69-2.58-9.74-2.58-15v-75c0-25.72 9.43-50.49 26.56-69.73z" />
+						<circle cx="120" cy="195.998" r="75" />
+						<path
+							d="m472.16 263.728c-32.722 38.703-87.477 48.061-130.6 24.34 5.86 17.886 5.861 37.167.36 54.75l7.52 8.45c17.13 19.24 26.56 44.01 26.56 69.73v75c0 5.26-.91 10.31-2.58 15h123.58c8.28 0 15-6.72 15-15v-150c0-33.3-15.58-63.03-39.84-82.27z" />
+						<circle cx="392" cy="195.998" r="75" />
+						<path
+							d="m256 405.998c-28.84 0-54.55-13.63-71.03-34.79-11.8 13.26-18.97 30.7-18.97 49.79v75c0 8.28 6.72 15 15 15h150c8.28 0 15-6.72 15-15v-75c0-19.09-7.17-36.53-18.97-49.79-16.48 21.16-42.19 34.79-71.03 34.79z" />
+						<circle cx="256" cy="315.998" r="60" />
+						<path
+							d="m213.319 121.992c17.126 15.828 34.103 26.34 34.817 26.78 4.823 2.968 10.904 2.968 15.727 0 .715-.44 17.691-10.952 34.817-26.78 24.764-22.886 37.32-45.135 37.32-66.128 0-47.676-47.41-70.055-80-43.57-32.663-26.544-80-3.98-80 43.57 0 20.993 12.556 43.242 37.319 66.128z" />
+						</svg>
+					<p>WELFARE</p>
+				</div>
+				<div class="offer-3">
+					<svg id="Capa_2" enable-background="new 0 0 512.014 512.014" height="20" viewBox="0 0 512.014 512.014"
+						width="10" xmlns="http://www.w3.org/2000/svg">
+						<g>
+							<path
+								d="m498.862 45.865c-12.395-16.433-31.309-25.857-51.893-25.857h-8.714v-5c0-8.284-6.716-15-15-15s-15 6.716-15 15v40c0 8.284 6.716 15 15 15s15-6.716 15-15v-5h8.714c11.083 0 21.268 5.075 27.942 13.923s8.756 20.035 5.711 30.692l-39.812 139.342c-11.11 38.885-47.114 66.042-87.555 66.042s-76.445-27.158-87.555-66.042l-39.811-139.343c-3.045-10.657-.963-21.844 5.711-30.692 6.674-8.849 16.859-13.923 27.942-13.923h8.713v5c0 8.284 6.716 15 15 15s15-6.716 15-15v-40c0-8.284-6.716-15-15-15s-15 6.716-15 15v5h-8.713c-20.583 0-39.498 9.425-51.893 25.857-12.396 16.433-16.261 37.208-10.606 56.999l39.812 139.342c7.286 25.5 22.328 47.419 43.5 63.39 4.538 3.423 9.271 6.478 14.153 9.2l43.748 103.258v10.826c0 29.295-23.833 53.128-53.128 53.128s-53.128-23.833-53.128-53.128v-102.872c0-47.42-38.58-86-86-86s-86 38.58-86 86v35.509c-34.192 6.968-60 37.271-60 73.491 0 41.355 33.645 75 75 75s75-33.645 75-75c0-36.219-25.808-66.522-60-73.491v-35.509c0-30.878 25.122-56 56-56s56 25.122 56 56v102.872c0 45.837 37.291 83.128 83.128 83.128s83.128-37.291 83.128-83.128v-10.826l43.749-103.258c4.882-2.722 9.615-5.777 14.152-9.2 21.172-15.97 36.214-37.89 43.5-63.39l39.812-139.342c5.655-19.79 1.788-40.566-10.607-56.998zm-378.862 389.142c0 24.813-20.187 45-45 45s-45-20.187-45-45 20.187-45 45-45 45 20.187 45 45zm233.256-58.451-20.452-48.273c6.697 1.135 13.529 1.724 20.453 1.724s13.755-.589 20.452-1.724z" />
+							<circle cx="75" cy="435.007" r="15" />
+						</g>
+					</svg>
+					<p>MEDICAL</p>
+				</div>
+				<div class="offer-4">
+					<svg id="Capa_2" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="utensils" role="img"
+						xmlns="http://www.w3.org/2000/svg" viewBox="0 0 416 512">
+						<path fill="#03486d"
+							d="M207.9 15.2c.8 4.7 16.1 94.5 16.1 128.8 0 52.3-27.8 89.6-68.9 104.6L168 486.7c.7 13.7-10.2 25.3-24 25.3H80c-13.7 0-24.7-11.5-24-25.3l12.9-238.1C27.7 233.6 0 196.2 0 144 0 109.6 15.3 19.9 16.1 15.2 19.3-5.1 61.4-5.4 64 16.3v141.2c1.3 3.4 15.1 3.2 16 0 1.4-25.3 7.9-139.2 8-141.8 3.3-20.8 44.7-20.8 47.9 0 .2 2.7 6.6 116.5 8 141.8.9 3.2 14.8 3.4 16 0V16.3c2.6-21.6 44.8-21.4 48-1.1zm119.2 285.7l-15 185.1c-1.2 14 9.9 26 23.9 26h56c13.3 0 24-10.7 24-24V24c0-13.2-10.7-24-24-24-82.5 0-221.4 178.5-64.9 300.9z">
+						</path>
+					</svg>
+					<p>DASTRAKHAN</p>
+				</div>
+				<div class="offer-5">
+					<svg version="1.1" id="Capa_2" xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 480.005 480.005"
+						style="enable-background:new 0 0 480.005 480.005;" xml:space="preserve">
+						<g>
+							<g>
+								<path d="M472.003,152h-56c-4.418,0-8,3.582-8,8v24h-72v-8c0-4.418-3.582-8-8-8h-32v-40c0-4.418-3.582-8-8-8h-24V72h23.2
+				l47.848,9.6c18.539,3.706,36.572-8.319,40.278-26.858c3.706-18.539-8.319-36.572-26.858-40.278c-4.429-0.885-8.99-0.885-13.419,0
+				L287.203,24h-23.2V8c0-4.418-3.582-8-8-8h-32c-4.418,0-8,3.582-8,8v16h-23.2l-47.856-9.6c-18.539-3.728-36.59,8.279-40.318,26.818
+				c-3.728,18.539,8.279,36.59,26.818,40.318c2.217,0.446,4.472,0.671,6.733,0.672c2.273-0.001,4.539-0.226,6.768-0.672L192.803,72
+				h23.2v48h-24c-4.418,0-8,3.582-8,8v40h-32c-4.418,0-8,3.582-8,8v16h-40c-57.41,0.066-103.934,46.59-104,104v48
+				c0,4.418,3.582,8,8,8h80c4.418,0,8-3.582,8-8v-48c0-4.418,3.582-8,8-8h40v16c0,4.418,3.582,8,8,8h176c4.418,0,8-3.582,8-8v-8h72
+				v24c0,4.418,3.582,8,8,8h56c4.418,0,8-3.582,8-8V160C480.003,155.582,476.421,152,472.003,152z M264.003,40h24
+				c0.538,0.005,1.074-0.049,1.6-0.16l48.624-9.72c9.875-1.969,19.476,4.44,21.445,14.315c1.969,9.875-4.44,19.476-14.315,21.445
+				c-2.354,0.469-4.777,0.469-7.131,0l-48.624-9.72c-0.526-0.111-1.062-0.165-1.6-0.16h-24V40z M144.003,272h-40
+				c-13.255,0-24,10.745-24,24v40h-64v-40c0.057-48.577,39.423-87.943,88-88h40V272z M232.003,16h16v8h-16V16z M232.003,40h16v16h-16
+				V40z M232.003,72h16v48h-16V72z M192.003,56c-0.538-0.005-1.074,0.049-1.6,0.16l-48.624,9.72
+				c-9.875,1.969-19.476-4.44-21.445-14.315c-1.969-9.875,4.44-19.476,14.315-21.445c2.354-0.469,4.777-0.469,7.131,0l48.624,9.72
+				c0.526,0.111,1.062,0.165,1.6,0.16h24v16H192.003z M200.003,136h80v32h-80V136z M320.003,296h-160V184h160V296z M408.003,280h-72
+				v-80h72V280z M464.003,312h-40V168h40V312z" />
+							</g>
+						</g>
+						<g>
+							<g>
+								<path d="M83.635,425.272l-28.584-53.064c-2.458-3.893-7.607-5.055-11.499-2.597c-1.048,0.662-1.935,1.549-2.597,2.597
+				l-28.584,53.064c-6.068,11.143-5.763,24.67,0.8,35.528c7.381,12.128,20.637,19.435,34.832,19.2
+				c14.195,0.235,27.451-7.072,34.832-19.2C89.398,449.941,89.703,436.415,83.635,425.272z M69.107,452.592
+				C64.594,459.869,56.563,464.21,48.003,464c-8.56,0.21-16.591-4.131-21.104-11.408c-3.693-6.019-3.858-13.561-0.432-19.736
+				l21.536-40l21.536,40C72.965,439.031,72.8,446.573,69.107,452.592z" />
+							</g>
+						</g>
+						<g></g>
+						<g></g>
+						<g></g>
+						<g></g>
+						<g></g>
+						<g></g>
+						<g></g>
+						<g></g>
+						<g></g>
+						<g></g>
+						<g></g>
+						<g></g>
+						<g></g>
+						<g></g>
+						<g></g>
+					</svg>
+					<p>RO PLANT</p>
+				</div>
+				<div class="offer-6">
+					<svg id="Capa_2" enable-background="new 0 0 512 512" height="20" viewBox="0 0 512 512" width="10"
+						xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="m501.991 128.354-241-85.031c-3.229-1.14-6.752-1.14-9.981 0l-241 85.031c-5.992 2.114-10.002 7.774-10.01 14.128s3.989 12.023 9.976 14.151l241 85.677c1.625.578 3.325.867 5.024.867 1.7 0 3.399-.289 5.024-.867l241-85.677c5.987-2.128 9.983-7.797 9.976-14.151-.008-6.354-4.018-12.014-10.009-14.128z" />
+						<path
+							d="m475.973 328.574v-130.84l-30 10.665v120.175c-9.036 5.201-15.125 14.946-15.125 26.121 0 11.174 6.089 20.92 15.125 26.121v73.716c0 8.284 6.716 15 15 15s15-6.716 15-15v-73.715c9.036-5.2 15.125-14.947 15.125-26.121 0-11.175-6.088-20.921-15.125-26.122z" />
+						<path
+							d="m256 273.177c-5.149 0-10.22-.875-15.073-2.6l-135.483-48.165v66.008c0 16.149 16.847 29.806 50.073 40.59 28.961 9.4 64.647 14.577 100.483 14.577s71.521-5.177 100.483-14.577c33.226-10.784 50.073-24.441 50.073-40.59v-66.008l-135.482 48.165c-4.854 1.725-9.925 2.6-15.074 2.6z" />
+						</svg>
+					<p>EDUCATION</p>
+				</div>
+			</div><br><br><br>
+		</div><br><br><br><br>
+		<div>
+			<h1 style="font-family: times new roman; margin: 0px 0px 0px 105.40px; color: #316dc3;">MISSION AND UPCOMING
+				PROJECTS</h1>
+			<hr style="margin: 0px 1180px 0px 104px; border-top: 2px solid green; ">
+			<div class="mission"
+				style="font-family: times new roman; border: 1px solid #eeeeee; background-color: #f8f7fa; width: 361px; height: 72px; margin: 30px 0px 0px 105.4px;">
+				<svg id="Layer_1" enable-background="new 0 0 512 512" height="30px" viewBox="0 0 512 512" width="30px"
+					xmlns="http://www.w3.org/2000/svg">
+					<g>
+						<g>
+							<path
+								d="m403.708 250.243-118.251 98.542c-39.71 33.092-89.765 51.215-141.457 51.215h-80c-26.51 0-48-21.49-48-48v-96c0-79.529 64.471-144 144-144h272c35.346 0 64 28.654 64 64 0 35.346-28.654 64-64 64-10.338 0-20.349 3.625-28.292 10.243z"
+								fill="#d73728" />
+						</g>
+						<g>
+							<circle cx="192" cy="368" fill="#3cb44b" r="32" />
+						</g>
+						<g>
+							<path
+								d="m290.542 291.215-69.085 57.57c-39.71 33.092-89.765 51.215-141.457 51.215h-16c-26.51 0-48-21.49-48-48v-96c0-79.529 64.471-144 144-144h272c35.346 0 64 28.654 64 64 0 35.346-28.654 64-64 64-51.692 0-101.747 18.123-141.458 51.215z"
+								fill="#f05a4b" />
+						</g>
+						<g>
+							<path d="m432 144h-96c-4.418 0-8-3.582-8-8s3.582-8 8-8h96c4.418 0 8 3.582 8 8s-3.582 8-8 8z"
+								fill="#ff7869" />
+						</g>
+						<g>
+							<path
+								d="m40 360c-4.418 0-8-3.582-8-8v-96c0-70.579 57.42-128 128-128h96c4.418 0 8 3.582 8 8s-3.582 8-8 8h-96c-61.757 0-112 50.243-112 112v96c0 4.418-3.582 8-8 8z"
+								fill="#ff7869" />
+						</g>
+						<g>
+							<path
+								d="m288 293.333 2.542-2.118c4.363-3.636 8.857-7.079 13.458-10.349v-136.866c0-17.673 14.327-32 32-32h-80c17.673 0 32 14.327 32 32z"
+								fill="#d7e6f0" />
+						</g>
+					</g>
+				</svg>
+				<p style="font-family: times new roman; margin: -24px 0px 0px 78px; color: #316dc3; font-weight: 900;">
+					HEPATITIS</p>
+			</div>
+			<div class="mission"
+				style="font-family: times new roman; border: 1px solid #eeeeee; background-color: #f8f7fa; width: 361px; height: 72px; margin: 25px 0px 0px 105.4px;">
+				<svg id="laptop_1" height="30" viewBox="0 0 60 60" width="30" xmlns="http://www.w3.org/2000/svg">
+					<g id="026---IT-Request" fill="none">
+						<g id="Icons" transform="translate(1 1)">
+							<path id="Rectangle-path" d="m11 38h36v5h-36z" fill="#283593" />
+							<path id="Rectangle-path" d="m11 38h33v5h-33z" fill="#3f51b5" />
+							<g fill="#283593">
+								<path id="Shape" d="m8.481 23h-1.481v-10h1.481l3 5z" />
+								<path id="Shape"
+									d="m51 4v5.02c-.1594284-.0166422-.3197398-.02332184-.48-.02-3.0057515-.00190888-5.8133685 1.4992899-7.481 4h-28.078c-1.6676315-2.5007101-4.4752485-4.00190888-7.481-4-.16026023-.00332184-.32057161.0033578-.48.02v-5.02c0-2.209139 1.790861-4 4-4h36c2.209139 0 4 1.790861 4 4z" />
+								<path id="Shape" d="m49.519 13h1.481v10h-1.481l-3-5z" />
+								<path id="Shape"
+									d="m50.52 27c.1602602.0033218.3205716-.0033578.48-.02v7.02c0 2.209139-1.790861 4-4 4h-36c-2.209139 0-4-1.790861-4-4v-7.02c.15942839.0166422.31973977.0233218.48.02 3.0057515.0019089 5.8133685-1.4992899 7.481-4h28.078c1.6676315 2.5007101 4.4752485 4.0019089 7.481 4z" />
+							</g>
+							<path id="Shape" d="m8.481 23h-1.481v-10h1.481l3 5z" fill="#3f51b5" />
+							<path id="Shape"
+								d="m48 4v5.36c-2.0281229.59651674-3.7833482 1.884366-4.961 3.64h-28.078c-1.6676315-2.5007101-4.4752485-4.00190888-7.481-4-.16026023-.00332184-.32057161.0033578-.48.02v-5.02c0-2.209139 1.790861-4 4-4h33c2.209139 0 4 1.790861 4 4z"
+								fill="#3f51b5" />
+							<path id="Shape" d="m46.519 18 1.481-2.47v4.94z" fill="#3f51b5" />
+							<path id="Shape"
+								d="m48 26.64v7.36c0 2.209139-1.790861 4-4 4h-33c-2.209139 0-4-1.790861-4-4v-7.02c.15942839.0166422.31973977.0233218.48.02 3.0057515.0019089 5.8133685-1.4992899 7.481-4h28.078c1.1776518 1.755634 2.9328771 3.0434833 4.961 3.64z"
+								fill="#3f51b5" />
+							<path id="Shape"
+								d="m11 26.28c.15-.06.3-.13.44-.2-.2469119 1.3569587-.3873399 2.731147-.42 4.11-.031-.19-.02-.155-.02-3.91z"
+								fill="#009688" />
+							<path id="Shape" d="m11 17.2.481.8-.481.8z" fill="#009688" />
+							<path id="Shape"
+								d="m46.18 4.02c-3.55.13-17.86 1.15-27.1 8.98h-4.119c-.9704871-1.4577731-2.3478449-2.5983269-3.961-3.28v-4.72c0-.55228475.4477153-1 1-1 36.617 0 34-.01 34.18.02z"
+								fill="#009688" />
+							<path id="Shape"
+								d="m47 5v4.72c-1.6131551.6816731-2.9905129 1.8222269-3.961 3.28h-23.959c9.24-7.83 23.548-8.915 27.1-8.98.1776715.03241697.3434156.11183606.48.23.2176316.18819509.3418877.46228946.34.75z"
+								fill="#00695c" />
+							<path id="Shape"
+								d="m47 26.28v3.72c0 .5522847-.4477153 1-1 1-36.2 0-34.228.134-34.66-.25-.164544-.1470487-.2768496-.3435835-.32-.56.0227192-1.3794597.16323-2.7544579.42-4.11 1.4236832-.6997911 2.6380462-1.7620569 3.521-3.08h28.078c.9704871 1.4577731 2.3478449 2.5983269 3.961 3.28z"
+								fill="#00695c" />
+							<path id="Shape"
+								d="m56 58h-54c-.66168964-.0026657-1.27923088-.3324316-1.64950003-.8808303-.37026914-.5483986-.44533249-1.2444362-.20049997-1.8591697l4.84-9.75c.61305031-1.516234 2.08451983-2.5090804 3.72-2.51h40.58c1.6354802.0009196 3.1069497.993766 3.72 2.51l4.84 9.75c.2448325.6147335.1697692 1.3107711-.2005 1.8591697-.3702691.5483987-.9878104.8781646-1.6495.8808303z"
+								fill="#0377bc" />
+							<path id="Shape"
+								d="m53 58h-51c-.66168964-.0026657-1.27923088-.3324316-1.64950003-.8808303-.37026914-.5483986-.44533249-1.2444362-.20049997-1.8591697l4.84-9.75c.61305031-1.516234 2.08451983-2.5090804 3.72-2.51h37.58c1.6354802.0009196 3.1069497.993766 3.72 2.51l4.84 9.75c.2448325.6147335.1697692 1.3107711-.2005 1.8591697-.3702691.5483987-.9878104.8781646-1.6495.8808303z"
+								fill="#02a9f4" />
+							<path id="Shape"
+								d="m35 54h-27.277c-.35761825.0007066-.68839235-.1896133-.86750734-.4991438-.17911498-.3095305-.17930283-.6911495-.00049266-1.0008562l2.277-5c.17898507-.3100129.51002916-.5007064.868-.5h25c.5522847 0 1 .4477153 1 1v5c0 .5522847-.4477153 1-1 1z"
+								fill="#3f51b5" />
+							<path id="Shape"
+								d="m50.277 54h-9.277c-.5522847 0-1-.4477153-1-1v-5c0-.5522847.4477153-1 1-1h7c.3579708-.0007064.6890149.1899871.868.5l2.277 5c.1788102.3097067.1786223.6913257-.0004927 1.0008562-.1791149.3095305-.5098891.4998504-.8675073.4991438z"
+								fill="#3f51b5" />
+							<path id="Shape"
+								d="m46.519 18 3-5h8.481c-1.670353-2.4969126-4.4763942-3.9957898-7.4805-3.9957898s-5.810147 1.4988772-7.4805 3.9957898h-28.078c-1.670353-2.4969126-4.4763942-3.9957898-7.4805-3.9957898-3.00410579 0-5.81014702 1.4988772-7.4805 3.9957898h8.481l3 5-3 5h-8.481c1.67035298 2.4969126 4.47639421 3.9957898 7.4805 3.9957898 3.0041058 0 5.810147-1.4988772 7.4805-3.9957898h28.078c1.670353 2.4969126 4.4763942 3.9957898 7.4805 3.9957898s5.810147-1.4988772 7.4805-3.9957898h-8.481z"
+								fill="#9e9e9e" />
+						</g>
+						<g id="Layer_2" fill="#000">
+							<path id="Shape"
+								d="m36 47h-25c-.7479871.0078786-1.43109767.4262742-1.778 1.089l-2.236 4.919c-.35371046.6192229-.35095003 1.3799386.00724504 1.9965782.35819507.6166397 1.01762953.995905 1.73075496.9954218h27.276c1.1045695 0 2-.8954305 2-2v-5c0-1.1045695-.8954305-2-2-2zm-27.235 6.918 2.235-4.918h25v5z" />
+							<path id="Shape"
+								d="m40 49v5c0 1.1045695.8954305 2 2 2h9.276c.6963768-.0001642 1.3425342-.3625397 1.7058168-.9566495.3632825-.5941098.3913829-1.334411.0741832-1.9543505l-2.32-5.081c-.3559283-.6231061-1.0184025-1.0077685-1.736-1.008h-7c-1.1045695 0-2 .8954305-2 2zm11.282 5h-9.282v-5l6.958-.082z" />
+							<path id="Shape"
+								d="m1 23c-.36904308.0000673-.70805185.2033839-.88190375.5289116-.1738519.3255278-.15428421.7203463.05090375 1.0270884 1.56606998 2.3390575 4.04661667 3.908509 6.831 4.322v6.122c.00299829 2.3751008 1.6735832 4.4215673 4 4.9v3.1h-1.292c-2.01881255-.0147005-3.84341822 1.2005153-4.608 3.069l-4.884 9.817c-.36954121.9240181-.25681365 1.9711501.30092881 2.7953428.55774245.8241927 1.48789784 1.31816 2.48307119 1.3186572h54c1.0093231-.0005892 1.9506992-.5086804 2.5051218-1.3520956.5544226-.8434151.6475704-1.9090929.2478782-2.8359044l-4.816-9.668c-.7539088-1.9039425-2.5972408-3.1516144-4.645-3.144h-1.292v-3.1c2.3264168-.4784327 3.9970017-2.5248992 4-4.9v-6.122c2.7846055-.412893 5.2653753-1.9824856 6.831-4.322.205188-.3067421.2247556-.7015606.0509037-1.0270884-.1738519-.3255277-.5128606-.5288443-.8819037-.5289116h-6v-8h6c.3690431-.0000673.7080518-.2033839.8819037-.5289116.1738519-.3255278.1542843-.7203463-.0509037-1.0270884-1.5656247-2.3395144-4.0463945-3.90910704-6.831-4.322v-4.122c-.0033061-2.76005315-2.2399468-4.99669388-5-5h-36c-2.76005315.00330612-4.99669388 2.23994685-5 5v4.122c-2.78460552.41289296-5.2653753 1.9824856-6.831 4.322-.20518796.3067421-.22475565.7015606-.05090375 1.0270884.1738519.3255277.51286067.5288443.88190375.5289116h6v8zm49.292 22c1.2553235.0043886 2.3771251.7846339 2.818 1.96l4.817 9.669c.1229724.3078051.0854347.6565434-.1002252.9311278s-.4953145.4393311-.8267748.4398722h-54c-.3184198-.0013014-.61754135-.1528337-.80695273-.408795-.18941137-.2559613-.24688436-.5863135-.15504727-.891205l4.883-9.817c.45306543-1.1413236 1.55905174-1.8885688 2.787-1.883zm-37.292-2v-3h2c0 .5522847.4477153 1 1 1s1-.4477153 1-1h2c0 .5522847.4477153 1 1 1s1-.4477153 1-1h2c0 .5522847.4477153 1 1 1s1-.4477153 1-1h2c0 .5522847.4477153 1 1 1s1-.4477153 1-1h2c0 .5522847.4477153 1 1 1s1-.4477153 1-1h2c0 .5522847.4477153 1 1 1s1-.4477153 1-1h2c0 .5522847.4477153 1 1 1s1-.4477153 1-1h2c0 .5522847.4477153 1 1 1s1-.4477153 1-1h2v3zm38-8c0 1.6568542-1.3431458 3-3 3h-36c-1.6568542 0-3-1.3431458-3-3v-6.026c.67537453-.0346942 1.3454795-.1378903 2-.308v2.334c0 1.1045695.8954305 2 2 2h34c1.1045695 0 2-.8954305 2-2v-2.334c.6545052.1701841 1.3246177.2733815 2 .308zm-33.358-20h24.716c-1.1209616 2.5488646-1.1209616 5.4511354 0 8h-24.716c1.1209616-2.5488646 1.1209616-5.4511354 0-8zm-1.179-2c-.9179636-1.220522-2.1023683-2.2154493-3.463-2.909v-4.091h34v4.091c-1.3606317.6935507-2.5450364 1.688478-3.463 2.909zm27.074 12c.9179636 1.220522 2.1023683 2.2154493 3.463 2.909v3.091h-34v-3.091c1.3606317-.6935507 2.5450364-1.688478 3.463-2.909zm13.272-12h-6.291c-.3513418-.0002845-.677059.1838331-.858.485l-3 5c-.1904131.3169325-.1904131.7130675 0 1.03l3 5c.180941.3011669.5066582.4852845.858.485h6.291c-3.2162395 2.8364566-8.0969703 2.6324408-11.0652745-.4625314s-2.9683042-7.979965 0-11.0749372 7.849035-3.298988 11.0652745-.4625314zm-5.809 2.14v7.72l-2.316-3.86zm-42-10.14c0-1.65685425 1.3431458-3 3-3h36c1.6568542 0 3 1.34314575 3 3v4.026c-.6753823.03461854-1.3454948.13781587-2 .308v-3.334c0-1.1045695-.8954305-2-2-2h-34c-1.1045695 0-2 .8954305-2 2v3.334c-.6545205-.17010968-1.32462547-.27330584-2-.308zm.482 20c.35134182.0002845.677059-.1838331.858-.485l3-5c.1904131-.3169325.1904131-.7130675 0-1.03l-3-5c-.180941-.3011669-.50665818-.4852845-.858-.485h-6.291c3.21623948-2.8364566 8.0969703-2.6324408 11.0652745.4625314s2.9683042 7.979965 0 11.0749372-7.84903502 3.298988-11.0652745.4625314zm-.482-2.14v-7.72l2.316 3.86z" />
+							<path id="Shape"
+								d="m22 20h5c.5522847 0 1-.4477153 1-1s-.4477153-1-1-1h-5c-.5522847 0-1 .4477153-1 1s.4477153 1 1 1z" />
+							<path id="Shape"
+								d="m33 20h5c.5522847 0 1-.4477153 1-1s-.4477153-1-1-1h-5c-.5522847 0-1 .4477153-1 1s.4477153 1 1 1z" />
+						</g>
+					</g>
+				</svg>
+				<p style="font-family: times new roman; margin: -24px 0px 0px 78px; color: #316dc3; font-weight: 900;">IT
+					LITERACY</p>
+			</div>
+			<div class="mission"
+				style="font-family: times new roman; border: 1px solid #eeeeee; background-color: #f8f7fa; width: 361px; height: 72px; margin: -169px 0px 0px 495px;">
+				<svg version="1.1" id="Capa_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+					x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+					<g>
+						<g>
+							<polygon points="256,152.96 79.894,288.469 79.894,470.018 221.401,470.018 221.401,336.973 296.576,336.973 296.576,470.018 
+				432.107,470.018 432.107,288.469 		" />
+						</g>
+					</g>
+					<g>
+						<g>
+							<polygon points="439.482,183.132 439.482,90.307 365.316,90.307 365.316,126.077 256,41.982 0,238.919 35.339,284.855 
+				256,115.062 476.662,284.856 512,238.92 		" />
+						</g>
+					</g>
+					<g></g>
+					<g></g>
+					<g></g>
+					<g></g>
+					<g></g>
+					<g></g>
+					<g></g>
+					<g></g>
+					<g></g>
+					<g></g>
+					<g></g>
+					<g></g>
+					<g></g>
+					<g></g>
+					<g></g>
+				</svg>
+				<p style="font-family: times new roman; margin: -23px 0px 0px 78px; color: #316dc3; font-weight: 900;">
+					HOUSING SPCIETY</p>
+			</div>
+			<div class="mission"
+				style="font-family: times new roman; border: 1px solid #eeeeee; background-color: #f8f7fa; width: 361px; height: 72px; margin: 25px 0px 0px 495px;">
+				<svg id="Capa_3" enable-background="new 0 0 512 512" height="30" viewBox="0 0 512 512" width="30"
+					xmlns="http://www.w3.org/2000/svg">
+					<g>
+						<path d="m336 137.291h-35v-30h35c11.028 0 20-8.972 20-20v-29.445h30v29.445c0 27.57-22.43 50-50 50z"
+							fill="#4fc16e" />
+						<path d="m211 474.167h-35c-27.57 0-50-22.43-50-50v-29.445h30v29.445c0 11.028 8.972 20 20 20h35z"
+							fill="#8adb53" />
+						<path
+							d="m211 344.188h-72.374c-52.383 0-95-42.617-95-95v-122.754c0-33.084 26.916-60 60-60s60 26.916 60 60v97.754h47.374z"
+							fill="#8adb53" />
+						<path
+							d="m373.374 445.566h-72.374v-120h47.374v-97.754c0-33.084 26.916-60 60-60s60 26.916 60 60v122.754c0 52.383-42.617 95-95 95z"
+							fill="#4fc16e" />
+						<path d="m316 512h-120v-452c0-33.084 26.916-60 60-60s60 26.916 60 60z" fill="#4fc16e" />
+						<path d="m316 60c0-33.084-26.916-60-60-60v512h60z" fill="#369151" />
+					</g>
+				</svg>
+				<p style="font-family: times new roman; margin: -24px 0px 0px 78px; color: #316dc3; font-weight: 900;">
+					THARPARKAR</p>
+			</div>
+			<div>
+				<h1 style="font-family: times new roman; color: #316dc3; margin: -240px 0px 0px 880px;">Upcoming Events</h1>
+				<hr style="margin: 5px 100px 0px 880px; border-top: 1px solid #eeeeee;">
+				<hr style="margin: -2px 410px 0px 880px; border-top: 2px solid green;">
+			</div>
+			<div
+				style="margin: 20px 1140px 0px 880px; width: 270px; height: 195px; color: #6c6c6c;overflow: scroll; overflow-x: hidden;">
+				Saylani Welfare Distributing Ration & Clothes to affected people of Balochistan. <span
+					style="color: blue; cursor: pointer;">More Details.</span><br><br> Entry Test Accouncement (Graphic
+				Designing & Video Editing/Animation Course) On Sunday 3rd March 2019 @ 11:00Am Vanue: 4rh Floor, Saylani
+				Welfare International Trust Head office Bahadurabad. <span style="color: blue; cursor: pointer;">More
+					Details.</span><br><br> Dr Jamil Ahmed (Additional Inspector General of Police) & Atiqmir Visit Saylani
+				Welfare International Trust, Saylani Mass I.T. Training . <span style="color: blue; cursor: pointer;">More
+					Details.</span><br><br>PIAIC Entrance Exam Merit Ranking List Announced. <span
+					style="color: blue; cursor: pointer;">More Details.</span></div>
+		</div><br><br><br><br><br><br>
+		<div>
+			<center>
+				<h1><span style="color: #316dc3;font-family: times new roman; font-size: 40px;">IMAGE</span> <span
+						style="color: #427900;font-family: times new roman; font-size: 40px;">GALLERY</span></h1>
+			</center>
+		</div>
+		<div class="picture" style="background-color: #f7f8fa;">
+			<img src="intro.jpg" width="40px" height="42px">
+		</div><br><br><br><br>
+		<div>
+			<a href="rashan2.jpg" download="My picture"><img width="227px"height="152" style="margin-right: -108px;"src="rashan2.jpg"></a>
+			<a href="food.jpg" download="My picture"><img width="227px"height="152" style="margin-right: -108px;" src="food.jpg"></a>
+			<a href="hazrat.jpg" download="My picture"><img width="227px"height="152" style="margin-right: -108px;"src="hazrat.jpg"></a>
+			<a href="rashan2.jpg" download="My picture"><img width="227px"height="152" style="margin-right: -108px;"src="rashan2.jpg"></a>
+			<a href="hazrat2.jpg" download="My picture"><img width="227px"height="152" src="hazrat2.jpg"></a>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+		<footer style="background-color: #25272e; width: 100%;height: 400px;">
+			<ul>
+				<li>Head Office,</li>
+				<li>A-25, Bahaduurabad Chowrangi Karachi, Pakistan</li>
+				<li><i class="fa fa-phone" style="color: #427900;"></i> UAN: 111-729-526</li>
+				<li><i class="fa fa-phone" style="color: #427900;"></i> CELL: 92-311-1729526</li>
+				<li><i class="fa fa-phone" style="color: #427900;"></i> USA NO +1(716)941 7792</li>
+				<li><i class="fa fa-phone" style="color: #427900;"></i> UK NO (+44)115 970 6256</li>
+				<li><i class="fa fa-envelope" style="color: #427900;"></i> info@saylaniwelfare.com</li>
+				<li><i class="fa fa-globe" style="color: #427900;"></i> (+0092-213) 4130786-90</li>
+			</ul>
+			<p style="color: #fff;margin-left: 492px; font-weight: 900;font-family: times new roman;"><br><br><br><br>
+				Useful Links</p>
+			<hr style="margin:10px 500px 0px 492px;border-top: 1px solid #eeeeee;">
+			<hr style="margin: -4px 805px 0px 492px; border-top: 3px solid green;">
+			<p style="color: #fff;margin-left: 872px;margin-top: -30px; font-weight: 900;font-family: times new roman;">
+				Connect With Us</p>
+			<ul class="bottom-links">
+				<li><a href="www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="www.instagram.com"><i class="fa fa-instagram"></i></a></li>
+				<li><a href="www.youtube.com"><i class="fa fa-youtube"></i></a></li>
+			</ul>
+			<div class="last"
+				style="border:1px solid #316dc3; width: 100%; height: 42px;margin-top: 300px; background-color: #316dc3;color: #fff;font-size: 12px;">
+				<p style="margin-left: 100px;margin-top: 15px;">Copyright © 2020 Saylani Welfare</p>
+			</div>
+		</footer>
+	</div>
+	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-up"></i></button>
+	
+	<script type="text/javascript">
+		var mybutton = document.getElementById("myBtn");
+
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function () { scrollFunction() };
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+		}
+
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+	</script>
+</body>
+</html>
